@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestHeader;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -27,5 +28,14 @@ public class TarefasService {
         dto.setEmailUsuario(email);
         TarefasEntity entity = tarefasConverter.paraTarefaEntity(dto);
         return tarefasConverter.paraTarefaDTO(tarefasRepository.save(entity));
+    }
+
+    public List<TarefasDTO> buscarTarefasAgendadasPorPeriodo(LocalDateTime dataInicial, LocalDateTime dataFinal){
+        return tarefasConverter.paraListTarefasDTO(tarefasRepository.findByDataEventoBetween(dataInicial, dataFinal));
+    }
+
+    public List<TarefasDTO> buscaTarefasPorEmail(String token){
+        String email = jwtUtil.extractEmailToken(token.substring(7));
+        return tarefasConverter.paraListTarefasDTO(tarefasRepository.findByEmailUsuario(email));
     }
 }
