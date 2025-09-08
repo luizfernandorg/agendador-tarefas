@@ -2,7 +2,7 @@
 
 ## Installation
 
-To install this project, follow the steps below. Before starting the service, make sure the PostgreSQL database named db_usuario has been created. 
+To install this project, follow the steps below. Before starting the service, ensure that the MongoDB document named 'tarefa' has been created. 
 This service does not include a frontend page; it's a Java backend only. Therefore, using Postman is recommended for testing.
 
 ```bash
