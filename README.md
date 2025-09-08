@@ -7,6 +7,6 @@ This service does not include a frontend page; it's a Java backend only. Therefo
 
 ```bash
   git clone https://github.com/luizfernandorg/agendador-tarefas.git
-  cd usuario
+  cd agendador-tarefas
   ./gradlew clean build; ./gradlew bootRun
 ```
