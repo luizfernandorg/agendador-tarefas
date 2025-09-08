@@ -6,7 +6,7 @@ To install this project, follow the steps below. Before starting the service, ma
 This service does not include a frontend page; it's a Java backend only. Therefore, using Postman is recommended for testing.
 
 ```bash
-  git clone (https://github.com/luizfernandorg/agendador-tarefas.git)
+  git clone https://github.com/luizfernandorg/agendador-tarefas.git
   cd usuario
   ./gradlew clean build; ./gradlew bootRun
 ```
