@@ -33,7 +33,9 @@ public class TarefasService {
     }
 
     public List<TarefasDTO> buscarTarefasAgendadasPorPeriodo(LocalDateTime dataInicial, LocalDateTime dataFinal) {
-        return tarefasConverter.paraListTarefasDTO(tarefasRepository.findByDataEventoBetween(dataInicial, dataFinal));
+        return tarefasConverter.paraListTarefasDTO(tarefasRepository.findByDataEventoBetweenAndStatusNotificacao(dataInicial,
+                dataFinal,
+                StatusNotificacao.PENDENTE));
     }
 
     public List<TarefasDTO> buscaTarefasPorEmail(String token) {
