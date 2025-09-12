@@ -3,7 +3,7 @@
 #### Other microservices for this project:
 ##### https://github.com/luizfernandorg/usuario
 ##### https://github.com/luizfernandorg/notificacao
-##### https://github.com/luizfernandorg/bff-agendador-tarefas (in production)
+##### https://github.com/luizfernandorg/bff-agendador-tarefas BFF (Backend for Frontend)
 
 ## Installation
 
