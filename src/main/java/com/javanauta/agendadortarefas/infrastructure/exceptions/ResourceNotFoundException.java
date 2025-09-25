@@ -1,11 +1,11 @@
 package com.javanauta.agendadortarefas.infrastructure.exceptions;
 
 public class ResourceNotFoundException extends RuntimeException {
-    public ResourceNotFoundException(String message) {
-        super(message);
+    public ResourceNotFoundException(String mensagem) {
+        super(mensagem);
     }
 
-    public ResourceNotFoundException(String message, Throwable throwable){
-        super(message, throwable);
+    public ResourceNotFoundException(String mensagem, Throwable throwable){
+        super(mensagem, throwable);
     }
 }
